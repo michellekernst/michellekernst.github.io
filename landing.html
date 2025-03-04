@@ -1,0 +1,366 @@
+<style>
+    @media screen and (max-width: 768px) {
+        
+        .hero {
+            flex-direction: column;
+        }
+
+        .heroimage {
+            min-width: 100%;
+        }
+  }
+
+  @media screen and (max-width: 576px) {
+    .hero {
+      padding: 3rem !important;
+    }
+  }
+  
+  * {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .header,
+  .hero {
+    background-color: #1f2937; /* add dark bgcolor to header and hero */
+  }
+
+  /* HEADER CSS START */
+  .header {
+    display: flex; /* headerlogo and headermenu display side by side */
+    justify-content: space-between; /* headerlogo and headermenu are evenly spaced on both sides */
+    padding: 1rem 5rem;
+  }
+
+  .headerlogo,
+  .headermenu {
+    font-size: 1.5rem;
+    color: #f9faf8; /* add light text color to headerlogo and headermenu */;
+  }
+
+  .headerlogo {
+    font-weight: 700; /* add bold font weight to headerlogo */
+  }
+
+  .headermenu a {
+    text-decoration: none; /* remove underline from headermenu links */
+    color: #f9faf8;
+    margin: 0 0.5rem;
+    text-transform: lowercase;
+    font-weight: 100;
+  }
+  /* HEADER CSS END */
+
+  /* HERO CSS START */
+  .hero {
+    display: flex; /* herotext and heroimage display side by side */
+    justify-content: center; /* herotext and heroimage are evenly spaced on both sides */
+    align-items: center; /* center the items vertically */
+    padding: 1.5625rem 6.25rem;
+    gap: 3.125rem; /* add space between herotext and heroimage */
+    flex-wrap: wrap; /* allow herotext and heroimage to wrap when the screen is too small */
+  }
+
+  .herotext {
+    flex: 1; /* herotext takes up the same amount of space as heroimage */
+  }
+
+  .herotext h1 {
+    font-size: 3rem;
+    color: #f9faf8;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .herotext h2 {
+    font-size: 1.125rem;
+    color: #e5e7eb;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .heroimage {
+    background-color: #6d747d; /* add dark bgcolor to heroimage */
+    color: #f9faf8;
+    flex: 1;
+    max-width: 50%;
+
+    /* center text in the div: */
+    display: flex; /* use flexbox to align items */
+    align-items: center; /* vertically center the text */
+    justify-content: center; /* horizontally center the text */
+  }
+
+  .hero button {
+    background-color: #3882ff;
+    color: #f9faf8;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 0.75rem 2.1875rem;
+    border-radius: 0.4375rem;
+    margin-top: 1rem;
+  }
+  /* HERO CSS END */
+
+  /* INFORMATION CSS START */
+  .information {
+    display: flex;
+    flex-direction: column; /* info-title and info-content display on top of each other */
+    gap: 3.75rem; /* add vertical space between info-title and info-content */
+    text-align: center;
+    margin: 3.125rem 0; /* add space above and below the information section */
+  }
+
+  .info-title {
+    font-size: 2.25rem;
+    color: #1f2937;
+    font-weight: 900;
+  }
+
+  .info-content {
+    display: flex;
+    flex-wrap: wrap; /* allow info-content-items to wrap when the screen is too small */
+    justify-content: center; /* center the info-content-items */
+    gap: 3.125rem; /* add space between info-content-items */
+  }
+
+  .info-content-item {
+    display: flex;
+    flex-direction: column; /* info-content-item-image and info-content-item-text display on top of each other */
+    align-items: center; /* center the items horizontally */
+  }
+
+  .info-content-item-image {
+    border-radius: 0.9375rem;
+    border: solid 0.1875rem #3882f6;
+    margin-bottom: 0.875rem; /* add space between image and text */
+  }
+
+  .info-content-item img {
+    aspect-ratio: 1; /* make the image square */
+    max-width: 10rem; /* image will not get bigger than 10x10 */
+    max-height: 10rem; /* image will not get bigger than 10x10 */
+  }
+
+  .info-content-item-text {
+    max-width: 10rem; /* text width matches image width */
+  }
+  /* INFORMATION CSS END */
+
+  /* QUOTE CSS START */
+  .quote {
+    background-color: #e5e7eb;
+    padding: 8.75rem 0; /* add padding to the quote div */
+  }
+
+  .quote-container {
+    width: 54%; /* quote-container takes up 54% of the screen width */
+    margin: auto; /* center the quote-container horizontally and add space above and below */
+  }
+
+  .quote-text {
+    font-size: 2.25rem;
+    color: #1f2937;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  .quote-author {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: right;
+  }
+  /* QUOTE CSS END */
+
+  /* CALL TO ACTION BANNER CSS START */
+  .action-banner {
+    margin: 6.25rem auto; /* add space above and below the action-banner and centers it horizontally */
+    background-color: #3882f6;
+    color: #fff;
+    border-radius: 0.625rem;
+    padding: 3.5rem 0; /* add space inside the action-banner */
+    max-width: 80%;
+  }
+
+  .action-banner-content {
+    margin: 0 0.625rem;
+    display: flex; /* action-banner-text and action-banner-button display side by side */
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem; /* ensures a gap remains between text and button even on smaller screens */
+  }
+
+  .action-banner-text h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .action-banner-text h2 {
+    font-size: 1.125rem;
+    font-weight: 100;
+  }
+
+  .action-banner-button button {
+    background-color: #3882f6;
+    border: solid 0.125rem #fff;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 0.625rem 2.0625rem;
+    border-radius: 0.4375rem;
+  }
+  /* CALL TO ACTION BANNER CSS END */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f2937;
+    color: #f9faf8;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+  }
+  .footer-text {
+    display: none;
+  }
+  /* FOOTER CSS END */
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ADD CUSTOM FONT START -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ADD CUSTOM FONT END -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <!-- HEADER START -->
+    <div class="header">
+      <div class="headerlogo">Header Logo</div>
+
+      <div class="headermenu"><a href="#">Header link 1</a>
+      <a href="#">Header link 2</a>
+      <a href="#">Header link 3</a></div>
+
+      </div>
+    </div>
+    <!-- HEADER END -->
+
+    <!-- HERO START -->
+    <div class="hero">
+      <!-- LEFT SIDE OF HERO START -->
+      <div class="herotext">
+        <h1>This website is awesome</h1>
+        <h2>
+          This website has some subtext here that goes under the main title.
+          It's a smaller font and the color is lower contrast
+        </h2>
+        <button>Sign up</button>
+      </div>
+      <!-- LEFT SIDE OF HERO END -->
+
+      <!-- RIGHT SIDE OF HERO START -->
+      <img class="heroimage" src="./placeholder-image.jpg" />
+      <!-- RIGHT SIDE OF HERO END -->
+    </div>
+    <!-- HERO END -->
+
+    <!-- INFORMATION START -->
+    <div class="information">
+      <div class="info-title">Some random information.</div>
+
+      <div class="info-content">
+        <!-- INFO CONTENT ITEM START -->
+        <div class="info-content-item">
+          <img class="info-content-item-image" src="./placeholder-image.jpg" />
+          <div class="info-content-item-text">
+            this is some subtext under an illustration or image
+          </div>
+        </div>
+        <!-- INFO CONTENT ITEM END -->
+
+        <!-- INFO CONTENT ITEM START -->
+        <div class="info-content-item">
+          <img class="info-content-item-image" src="./placeholder-image.jpg" />
+          <div class="info-content-item-text">
+            this is some subtext under an illustration or image
+          </div>
+        </div>
+        <!-- INFO CONTENT ITEM END -->
+
+        <!-- INFO CONTENT ITEM START -->
+        <div class="info-content-item">
+          <img class="info-content-item-image" src="./placeholder-image.jpg" />
+          <div class="info-content-item-text">
+            this is some subtext under an illustration or image
+          </div>
+        </div>
+        <!-- INFO CONTENT ITEM END -->
+
+        <!-- INFO CONTENT ITEM START -->
+        <div class="info-content-item">
+          <img class="info-content-item-image" src="./placeholder-image.jpg" />
+          <div class="info-content-item-text">
+            this is some subtext under an illustration or image
+          </div>
+        </div>
+        <!-- INFO CONTENT ITEM END -->
+      </div>
+    </div>
+    <!-- INFORMATION END -->
+
+    <!-- QUOTE START -->
+    <div class="quote">
+      <div class="quote-container">
+        <div class="quote-text">
+          This is an inspiring quote, or a testimonial from a customer. Maybe
+          it's just filling up space, or maybe people will actually read it. Who
+          knows? All I know is that it looks nice.
+        </div>
+        <div class="quote-author">- Thor, God of Thunder</div>
+      </div>
+    </div>
+    <!-- QUOTE END -->
+
+    <!-- CALL TO ACTION BANNER START -->
+    <div class="action-banner">
+        <div class="action-banner-content">
+        <!-- LEFT SIDE OF BANNER START -->
+        <div class="action-banner-text">
+            <h1>Call to action! It's time!</h1>
+            <h2>
+            Sign up for our product by clicking the button right over there!
+            </h2>
+        </div>
+        <!-- LEFT SIDE OF BANNER END -->
+
+        <!-- RIGHT SIDE OF BANNER START -->
+        <div class="action-banner-button">
+            <button>Sign up</button>
+        </div>
+        <!-- RIGHT SIDE OF BANNER END -->
+    </div>
+    </div>
+    <!-- CALL TO ACTION BANNER END -->
+
+    <!-- FOOTER START -->
+    <div class="footer">
+      <div class="footer-text">Copyright (c) The Odin Project 2021</div>
+    </div>
+    <!-- FOOTER END -->
+  </body>
+</html>
